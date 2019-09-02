@@ -9,7 +9,7 @@
 # and your compatibility with that friend's animal.
 ######################################################################
 # Acknowledgements:
-#   Original Author: Dr. Scott Heggen
+#   Original Author: Dr. Scott Heggen, the god of modulus
 ######################################################################
 
 # Remember to read the detailed notes about each task in the A01 document.
