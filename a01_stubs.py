@@ -81,29 +81,35 @@ else:
     print("You did it. You broke everything. I don't know what you did but don't do it again.")
 
 ######################################################################
+
+print(birthYear , " you")
+print(birthYearFriend, " friend")
+
 #CompatScore 5= great 4 = good 3 = possible 2 = whatever 1 = bad  0 = conflict
 compatibilityScore = 2
 #Start at 2 as its the hardest to make senese of
 #Column 1
 if birthYear % 2 == 0:
-    if birthYear + birthYearFriend == 0 or 4 or 8 or 12 or 16 or 20 or 24:
-        compatibilityScore = 5
+    for match1 in [0, 4, 8, 12, 16, 20, 24]:
+        if birthYear + birthYearFriend == match1:
+            compatibilityScore = 5
 elif birthYear % 2 == 1:
-    if birthYear + birthYearFriend == 2 or 6 or 10 or 14 or 18 or 22 or 26:
-        compatibilityScore = 5
+    for match2 in [2, 6, 10, 14, 18, 22, 26]:
+        if birthYear + birthYearFriend == match2:
+            compatibilityScore = 5
 #Column 2
-if birthYear + birthYearFriend == 9 or 21:
+elif (birthYear + birthYearFriend == 9) or (birthYear + birthYearFriend == 21):
     compatibilityScore = 4
 #Column 3
-if birthYear - birthYearFriend == 1 or -1 or 11 or -11:
+elif (abs(birthYear - birthYearFriend == 1)) or (abs(birthYear - birthYearFriend == 11)):
     compatibilityScore = 3
 #column 5
-if (birthYear - birthYearFriend) or (birthYearFriend - birthYear ) == 6:
+if ((birthYear - birthYearFriend) == 6) or ((birthYearFriend - birthYear) == 6):
     compatibilityScore = 1
 #column 6
 birthYear = (birthYear + 3) % 12
 birthYearFriend = (birthYearFriend + 3) % 12
-if birthYear + birthYearFriend == 9 or 21:
+if (birthYear + birthYearFriend == 9) or (birthYear + birthYearFriend == 9):
     compatibilityScore = 0
 if compatibilityScore == 5:
     print("You'll be the best of friends!")
